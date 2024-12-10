@@ -1,5 +1,5 @@
 name: GitHub Actions Test
-run-name: ${{ github.actor }} workflow test
+run-name: ${{ github.actor }} workflow test. Job should not be submitted. 
 on: [push]
 jobs:
   testJob:
