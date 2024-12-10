@@ -1,6 +1,10 @@
 name: GitHub Actions Test
 run-name: ${{ github.actor }} workflow test
-on: [push]
+on:
+  push:
+    branches:
+      - staging  # Trigger the workflow only on pushes to the staging branch
+
 jobs:
   testJob:
     runs-on: ubuntu-latest
