@@ -1,5 +1,5 @@
 name: GitHub Actions Test
-run-name: ${{ github.actor }} workflow test
+run-name: ${{ github.actor }} workflow staging test
 on:
   push:
     branches:
