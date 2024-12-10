@@ -12,3 +12,9 @@ jobs:
       - run: echo "Repository cloned, I think I'm ready. The files look like this:"
       - name: List files
         run: ls
+      - name: Log in to Azure 
+        uses: azure/login@v1
+        with: 
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+      - name: Test Azure login by getting details 
+        run: az account show 
