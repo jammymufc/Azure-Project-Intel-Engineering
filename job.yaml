@@ -1,0 +1,12 @@
+$schema: https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
+code: .
+command: python random_forest.py --trainingdata ${{ inputs.training_data }}
+inputs:
+  training_data:
+    #iris.csv
+    type: uri_file
+    path: azureml:ProjectDataset:1
+environment: azureml://registries/azureml/environments/sklearn-1.1/versions/14
+compute: ProjectCompute
+experiment_name: Project
+description: Project 
