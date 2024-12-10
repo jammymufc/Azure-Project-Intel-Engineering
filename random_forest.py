@@ -46,7 +46,7 @@ acc = np.average(testPredictions == Y_test)
 print("Accuracy", acc)
 
 # Step 6: Compute and plot the confusion matrix
-cm = confusion_matrix(Y_test, testPredictions, normalize='false')  
+cm = confusion_matrix(Y_test, testPredictions, normalize=None)  
 disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=np.unique(Y_test))
 disp.plot(cmap='Blues')
 plt.title('Confusion Matrix')
