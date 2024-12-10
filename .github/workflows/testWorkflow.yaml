@@ -19,4 +19,4 @@ jobs:
       - name: Test Azure login by getting details 
         run: az account show 
       - name: Submit job to Azure
-        run: az ml job create --file job.yaml --resource-group ProjectResourceGroup --workspace-name ProjectWorkspace
+        run: az extension add --name ml job create --file job.yaml --resource-group ProjectResourceGroup --workspace-name ProjectWorkspace
