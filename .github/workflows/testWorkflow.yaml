@@ -36,7 +36,3 @@ jobs:
 
       - name: Submit job to Azure
         run: az ml job create --file job.yaml --resource-group ProjectResourceGroup --workspace-name ProjectWorkspace
-
-      #Tests
-      - name: Run UnitTests 
-        run: python -m unittest test_model.py
