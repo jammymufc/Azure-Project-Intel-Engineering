@@ -1,5 +1,4 @@
 name: GitHub Actions Test
-run-name: ${{ github.actor }} workflow test
 on:
   push:
     branches:
