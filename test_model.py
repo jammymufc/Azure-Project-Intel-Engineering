@@ -1,7 +1,7 @@
 import unittest
 import pandas as pd
 import numpy as np
-from train import loadData, splitData, buildModel, assessModel
+from model import loadData, splitData, buildModel, assessModel
 from sklearn.ensemble import RandomForestClassifier
 
 class TestTrain(unittest.TestCase):
