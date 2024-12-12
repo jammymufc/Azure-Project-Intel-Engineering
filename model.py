@@ -89,7 +89,7 @@ def plotROCCurve(Y_test, Y_scores, classes):
     plt.xlabel('False Positive Rate')
     plt.ylabel('True Positive Rate')
     plt.title('ROC Curve')
-    plt.plot([0, 1], [0, 1], 'k--')  # Plot the diagonal (50% line)
+    plt.plot([0, 1], [0, 1], 'k--') 
 
     for idx, className in enumerate(classes):
         fpr, tpr, _ = roc_curve(Y_test == className, Y_scores[:, idx])
@@ -100,8 +100,10 @@ def plotROCCurve(Y_test, Y_scores, classes):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('--data', required=True, help='Path to the dataset file')
-    parser.add_argument('--model', default=None, help='Path to save the trained model')
+    parser.add_argument('--data', required=True, 
+                        help='Path to the dataset file')
+    parser.add_argument('--model', default=None, 
+                        help='Path to save the trained model')
     args = parser.parse_args()
     # Enable MLflow autologging
     mlflow.autolog()
